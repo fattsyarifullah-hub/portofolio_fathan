@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --gradient-first-background-color: #030f1e;
+  --gradient-second-background-color: #70a8ed;
+  --button-background-color: #dafa08;
+  --button-second-color: #ffffff;
+  --base-text-color: #fbfcfd;
+  --base-shadow-box: #03346E;
+  --first-shadow-box: #021526;
+  --second-shadow-box: #011E41;
+  --font-style-header: "BBH Sans Bogle", sans-serif;
+  --font-style-text: "Merriweather", serif;
+  --font-back-up: "poppins", serif; 
+}
+
+/* styling all */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {   
+    background-position: 0% 50%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 150px;
+  height: 45px;
+  background: var(--button-background-color);
+  border-radius: 34px;
+  text-align: center;
+  color: var(--second-shadow-box);
+  font-style: var(--font-style-header);
+  z-index: 1;
+  box-shadow: 0 6px 12px var(--button-second-color);
+  animation: slideUp 1s ease;
+  transition: transform 0.2s ease-in;
+}
+
+.button:hover {
+  transform: rotateY(40deg);
+}
+
+.kotak:hover {
+  transform: rotateX(20deg);
+}
+
+/* styling pembukaan */
+.pembukaan {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+.pembukaan > h1 {
+  font-family: var(--font-style-header);
+  font-weight: 200;
+  font-size: 50px;
+  letter-spacing: 2px;
+  color: var(--base-text-color);
+  text-align: center;
+  margin-top: 100px;
+  animation: slideUp 1s ease forwards;
+}
+
+.pembukaan > a {
+  text-decoration: none;
+  font-family: var(--font-style-text);
+  padding: 5px;
+  transition: transform 0.2s;
+}
+
+/* styling index */
+.index {
+  margin-top: 90px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+.container-box {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  animation: slideUp 1s ease forwards;
+}
+
+.container {
+  background: var(--base-shadow-box);
+  border-radius: 20px;
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 3px 9px var(--first-shadow-box), 0px 9px 18px var(--second-shadow-box);
+  text-align: center;
+  padding: 20px;
+}
+
+.container > h2 {
+  font-family: var(--font-style-header);
+  font-weight: 200;
+  font-size: 35px;
+  letter-spacing: 2px;
+  color: var(--base-text-color);
+  text-align: center;
+  margin-top: 100px;
+}
+
+.index .button {
+  margin: auto;
+}
+
+.index .back-btn .button {
+  margin-left: 35px;
+}
+
+/* styling about me */
+.about-me {
+  margin: 10px 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 60px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+.about-me > h1, h2 {
+  font-family: var(--font-style-header);
+  font-weight: 200;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: var(--base-text-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  width: 100%;
+  padding: 20px;
+  animation: slideUp 1s ease;
+}
+
+.profile-picture {
+  flex: 0 0 auto;
+}
+
+.photo-profile > img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.profile-picture > .back-btn {
+  margin-top: 245px;
+  position: absolute;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.aside-content {
+  background: var(--base-shadow-box);
+  border-radius: 20px;
+  color: var(--base-text-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 9px var(--first-shadow-box), 0px 9px 18px var(--second-shadow-box);
+  animation: slideUp 1s ease forwards;
+}
+
+.aside-content > p {
+  font-family: var(--font-style-text);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.aside-content > .edu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: left;
+}
+
+.aside-content > .edu > span:nth-child(even) {
+  font-size: smaller;
+  font-family: var(--font-back-up);
+}
+
+.gallery {
+  margin-left: 60px;
+  width: 1000px;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid gray;
+  backdrop-filter: blur(50px);
+  padding: 20px;
+  gap: 50px;
+  border-radius: 30px;
+}
+
+.gallery > img {
+  width: 300px;
+  height: 250px;
+}
+
+/* styling skill */
+.skill {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+/* styling project */
+.project {
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  padding-top: 100px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+.project > h1 {
+  font-family: var(--font-style-header);
+  font-weight: 200;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: var(--base-text-color);
+  margin-bottom: 10px;
+  text-align: center;
+  animation: slideUp 1s ease;
+}
+
+.project-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  background: var(--base-shadow-box);
+  border-radius: 20px;
+  color: var(--base-text-color);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 9px var(--first-shadow-box), 0px 9px 18px var(--second-shadow-box);
+  animation: slideUp 1s ease forwards;
+}
+
+.project-container > img {
+  
+  width: 100px;
+  height: 100px;
+}
+
+/* styling contact me */
+.contact-me {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  padding-top: 150px;
+  height: 100vh;
+  background: linear-gradient(145deg, var(--gradient-first-background-color), var(--gradient-second-background-color));
+  background-size: 600% 600%;
+  animation: gradientMove 5s ease infinite;
+  z-index: 0;
+}
+
+.Icon {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.iconmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--base-shadow-box);
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 3px 9px var(--first-shadow-box), 0px 9px 18px var(--second-shadow-box);
+  padding: 20px;
+  animation: slideUp 1s ease forwards;
+}
+
+.iconmenu > a > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
